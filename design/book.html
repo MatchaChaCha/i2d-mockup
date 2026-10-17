@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Book · Inspiration 2 Dance</title>
+<link rel="preload" href="assets/fonts/bodoni-moda-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/img/i2d-logo.png">
+</head>
+<body data-page="book">
+<div data-header></div>
+
+<main>
+  <div class="rail page-head" style="padding-bottom:28px">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Book</span></nav>
+    <h1 class="display" style="font-size:clamp(2.4rem,5vw,4rem)">Book your time on the floor.</h1>
+  </div>
+
+  <div class="rail">
+    <div class="tabbar" role="tablist" data-tabs id="modeTabs">
+      <button class="ctab" role="tab" aria-selected="true" aria-controls="lessonPane" data-value="lesson">Private lessons</button>
+      <button class="ctab" role="tab" aria-selected="false" aria-controls="classPane" data-value="class">Group classes</button>
+    </div>
+
+    <!-- ============ PRIVATE LESSONS ============ -->
+    <div id="lessonPane" class="panel">
+      <div class="booker" id="lessonBooker">
+        <form class="steps" id="lessonForm" novalidate>
+          <section class="step" data-step="what">
+            <div class="step-head"><span class="step-no">1</span><h2>What would you like?</h2></div>
+            <div class="options cols-2">
+              <label class="opt"><input type="radio" name="what" value="taster" data-price="40" data-mins="30" data-label="Taster lesson"><span class="card"><span class="dot"></span><span><span class="t">Taster lesson <span class="tag">First visit</span></span><br><span class="s">30 min, one to one or couple</span></span><span class="p">£40</span></span></label>
+              <label class="opt"><input type="radio" name="what" value="single" data-price="105" data-mins="60" data-label="Private lesson" checked><span class="card"><span class="dot"></span><span><span class="t">Private lesson</span><br><span class="s">60 min</span></span><span class="p">£105</span></span></label>
+              <label class="opt"><input type="radio" name="what" value="five" data-price="495" data-mins="60" data-label="5 hour package"><span class="card"><span class="dot"></span><span><span class="t">5 hour package</span><br><span class="s">Weekly classes included</span></span><span class="p">£495<small>£99 / hr</small></span></span></label>
+              <label class="opt"><input type="radio" name="what" value="ten" data-price="950" data-mins="60" data-label="10 hour package"><span class="card"><span class="dot"></span><span><span class="t">10 hour package</span><br><span class="s">Weekly classes included</span></span><span class="p">£950<small>£95 / hr</small></span></span></label>
+            </div>
+          </section>
+
+          <section class="step" data-step="style">
+            <div class="step-head"><span class="step-no">2</span><h2>Style</h2></div>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="style" value="Ballroom" checked><span>Ballroom</span></label>
+              <label class="chip"><input type="radio" name="style" value="Latin"><span>Latin</span></label>
+              <label class="chip"><input type="radio" name="style" value="American Smooth"><span>American Smooth</span></label>
+              <label class="chip"><input type="radio" name="style" value="Salsa"><span>Salsa</span></label>
+              <label class="chip"><input type="radio" name="style" value="Argentine Tango"><span>Argentine Tango</span></label>
+              <label class="chip"><input type="radio" name="style" value="Wedding dance"><span>Wedding dance</span></label>
+              <label class="chip"><input type="radio" name="style" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+          </section>
+
+          <section class="step" data-step="teacher">
+            <div class="step-head"><span class="step-no">3</span><h2>Teacher</h2></div>
+            <div class="teachers" id="teachers"></div>
+          </section>
+
+          <section class="step" data-step="when">
+            <div class="step-head"><span class="step-no">4</span><h2>Date and time</h2><span class="hint" id="durHint">60 min</span></div>
+            <div class="month-row">
+              <b id="monthLabel"></b>
+              <span style="display:flex;gap:8px">
+                <button type="button" class="icon-btn" id="prevWeek" aria-label="Earlier dates"><svg viewBox="0 0 16 16" fill="none"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <button type="button" class="icon-btn" id="nextWeek" aria-label="Later dates"><svg viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </span>
+            </div>
+            <div class="dates" id="dates"></div>
+            <div id="times" style="margin-top:18px"></div>
+          </section>
+
+          <section class="step" data-step="you">
+            <div class="step-head"><span class="step-no">5</span><h2>Your details</h2></div>
+            <div class="form-grid">
+              <div class="field"><label for="f-name">Name</label><input class="control" id="f-name" autocomplete="name" placeholder="Your name"></div>
+              <div class="field"><label for="f-partner">Partner <span style="font-weight:500">(optional)</span></label><input class="control" id="f-partner" placeholder="If you're coming as a couple"></div>
+              <div class="field"><label for="f-email">Email</label><input class="control" id="f-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+              <div class="field"><label for="f-phone">Phone</label><input class="control" id="f-phone" type="tel" autocomplete="tel" placeholder="07…"></div>
+              <div class="field full"><label for="f-notes">Anything we should know?</label><textarea class="control" id="f-notes" placeholder="A wedding date, a song, an exam you're working towards"></textarea></div>
+            </div>
+          </section>
+        </form>
+
+        <aside class="summary" aria-live="polite">
+          <div class="ph"><img src="assets/img/gala-waltz.webp" alt="" width="1400" height="961"></div>
+          <div class="inner">
+            <h2 id="sumTitle">Private lesson</h2>
+            <dl>
+              <div><dt>Style</dt><dd id="sumStyle">Ballroom</dd></div>
+              <div><dt>Teacher</dt><dd id="sumTeacher">Any teacher</dd></div>
+              <div><dt>When</dt><dd id="sumWhen" class="empty">Pick a time</dd></div>
+              <div><dt>Where</dt><dd>21 Piccadilly, Floor C</dd></div>
+            </dl>
+            <div class="total"><span>Total</span><b class="num" id="sumTotal">£105</b></div>
+            <button class="btn btn-primary btn-block" id="confirmBtn" disabled>Confirm and pay</button>
+            <div class="perks">
+              <div><svg viewBox="0 0 20 20" fill="none"><path d="m4 10.5 3.5 3.5L16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Free changes up to 24 hours before</div>
+              <div id="perkPack" class="hidden"><svg viewBox="0 0 20 20" fill="none"><path d="m4 10.5 3.5 3.5L16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly group classes and solo practice included</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="confirm hidden" id="lessonDone">
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>You're booked in.</h2>
+        <p id="doneLine"></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#">Add to calendar</a>
+          <a class="btn btn-ghost" href="index.html#visit">How to find us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ GROUP CLASSES ============ -->
+    <div id="classPane" class="panel hidden">
+      <div class="avail-head">
+        <div class="seg" role="group" aria-label="Level" id="levelSeg">
+          <button type="button" aria-pressed="true" data-level="all">All levels</button>
+          <button type="button" aria-pressed="false" data-level="Beginner">Beginner</button>
+          <button type="button" aria-pressed="false" data-level="Improver">Improver</button>
+          <button type="button" aria-pressed="false" data-level="Kids">Kids</button>
+        </div>
+        <div class="legend"><span><i style="background:var(--ok)"></i>Spaces</span><span><i style="background:var(--flame-deep)"></i>Nearly full</span><span><i style="background:var(--full)"></i>Full</span></div>
+      </div>
+      <div class="dates" id="classDates"></div>
+      <div class="week" id="classList" style="margin-top:14px"></div>
+    </div>
+  </div>
+</main>
+
+<div class="book-bar" id="bookBar">
+  <div><span id="barWhat">Private lesson</span><b class="num" id="barTotal">£105</b></div>
+  <button class="btn btn-primary" id="barBtn" disabled>Confirm</button>
+</div>
+
+<div data-footer></div>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const params = new URLSearchParams(location.search);
+
+  // ---------- data (mock) ----------
+  const teachers = [
+    ["any", "Any teacher", null],
+    ["viktoriya", "Viktoriya", "viktoriya-wilton"],
+    ["byron", "Byron", "byron-rowe"],
+    ["roman", "Roman", "roman-sukhomlyn"],
+    ["olga", "Olga", "olga-gandembul"],
+    ["maksym", "Maksym", "maksym-svyatobatko"],
+    ["oleksandr-k", "Oleksandr K.", "oleksandr-kutniakov"],
+    ["anastasia", "Anastasia", "anastasia-sheptitskaya"],
+    ["oleksandr-y", "Oleksandr Y.", "oleksandr-yasynskyi"],
+  ];
+  const classes = [
+    // [weekday 0=Sun..6, start, mins, name, level, teacher, cap]
+    [1, "18:30", 60, "Ballroom foundations", "Beginner", "Byron", 16],
+    [1, "19:30", 60, "Latin technique", "Improver", "Olga", 14],
+    [2, "19:00", 60, "Salsa social", "Beginner", "Anastasia", 20],
+    [2, "20:00", 60, "Argentine Tango", "Improver", "Roman", 14],
+    [3, "18:30", 60, "Latin for beginners", "Beginner", "Maksym", 16],
+    [3, "19:30", 75, "Smooth technique", "Improver", "Viktoriya", 12],
+    [4, "19:00", 60, "Ballroom improvers", "Improver", "Oleksandr K.", 14],
+    [4, "20:00", 60, "Bachata", "Beginner", "Anastasia", 20],
+    [5, "18:30", 90, "Friday social dance", "Beginner", "The team", 40],
+    [6, "10:30", 45, "Kids Ballroom & Latin", "Kids", "Oleksandr Y.", 12],
+    [6, "12:00", 60, "Latin for beginners", "Beginner", "Olga", 16],
+    [0, "11:00", 45, "Kids Latin", "Kids", "Maksym", 12],
+    [0, "16:00", 60, "Ballroom foundations", "Beginner", "Roman", 16],
+  ];
+  const hash = (s) => { let h = 2166136261; for (const c of s) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return (h >>> 0) / 4294967295; };
+  const DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+  const key = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const fmtLong = (d) => `${DAY[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()].slice(0, 3)}`;
+
+  // ---------- teachers ----------
+  $("#teachers").innerHTML = teachers.map(([v, n, img], i) => `
+    <label class="opt teacher"><input type="radio" name="teacher" value="${v}" data-label="${n}"${i === 0 ? " checked" : ""}>
+      <span class="card"><span class="face${img ? "" : " any"}">${img ? `<img src="assets/img/team-${img}.webp" alt="" loading="lazy">` : "i2D"}</span><span class="t">${n}</span></span></label>`).join("");
+
+  // ---------- dates ----------
+  let offset = 0, selDate = new Date().getHours() >= ([0, 6].includes(today.getDay()) ? 17 : 19) ? addDays(today, 1) : today, selTime = null;
+  function renderDates(target, name, onPick, current) {
+    const days = [...Array(14)].map((_, i) => addDays(today, offset + i));
+    target.innerHTML = days.map((d) => `
+      <label class="opt date"><input type="radio" name="${name}" value="${key(d)}"${key(d) === key(current) ? " checked" : ""}>
+        <span class="card"><span class="d">${i18nDay(d)}</span><span class="n">${d.getDate()}</span><span class="m">${MON[d.getMonth()].slice(0, 3)}</span></span></label>`).join("");
+    $$("input", target).forEach((inp) => inp.addEventListener("change", () => onPick(new Date(inp.value + "T00:00:00"))));
+    $("#monthLabel").textContent = `${MON[days[0].getMonth()]} ${days[0].getFullYear()}`;
+  }
+  const i18nDay = (d) => (key(d) === key(today) ? "Today" : DAY[d.getDay()]);
+
+  // ---------- times ----------
+  function renderTimes() {
+    const teacher = $('input[name="teacher"]:checked').value;
+    const mins = +$('input[name="what"]:checked').dataset.mins;
+    const weekend = [0, 6].includes(selDate.getDay());
+    const last = weekend ? 19 : 21;  // closes at :45
+    const slots = [];
+    const closeAt = (last * 60) + 45;
+    for (let m = 10 * 60; m + mins <= closeAt; m += 30) slots.push(`${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`);
+    const now = new Date();
+    const past = (t) => key(selDate) === key(today) && (+t.slice(0, 2) * 60 + +t.slice(3)) < now.getHours() * 60 + now.getMinutes() + 120;
+    const busy = (t) => past(t) || hash(key(selDate) + teacher + t) < (teacher === "any" ? 0.3 : 0.55);
+    const groups = [["Morning", (t) => t < "12:00"], ["Afternoon", (t) => t >= "12:00" && t < "17:00"], ["Evening", (t) => t >= "17:00"]];
+    $("#times").innerHTML = groups.map(([g, f]) => {
+      const list = slots.filter(f);
+      if (!list.length) return "";
+      return `<div class="times-group"><p class="label">${g}</p><div class="times">${list.map((t) => `
+        <label class="opt time"><input type="radio" name="time" value="${t}"${busy(t) ? " disabled" : ""}${t === selTime ? " checked" : ""}><span class="card">${t}</span></label>`).join("")}</div></div>`;
+    }).join("");
+    $$('#times input').forEach((i) => i.addEventListener("change", () => { selTime = i.value; update(); }));
+    if (selTime && !$(`#times input[value="${selTime}"]:not(:disabled)`)) selTime = null;
+  }
+
+  // ---------- summary ----------
+  function update() {
+    const w = $('input[name="what"]:checked');
+    const style = $('input[name="style"]:checked').value;
+    const t = $('input[name="teacher"]:checked').dataset.label;
+    $("#sumTitle").textContent = w.dataset.label;
+    $("#sumStyle").textContent = style;
+    $("#sumTeacher").textContent = t;
+    $("#sumTotal").textContent = $("#barTotal").textContent = "£" + w.dataset.price;
+    $("#barWhat").textContent = w.dataset.label + (selTime ? ` · ${fmtLong(selDate)}, ${selTime}` : "");
+    $("#durHint").textContent = w.dataset.mins + " min";
+    $("#perkPack").classList.toggle("hidden", !["five", "ten"].includes(w.value));
+    const when = $("#sumWhen");
+    if (selTime) { when.textContent = `${fmtLong(selDate)}, ${selTime}`; when.classList.remove("empty"); }
+    else { when.textContent = "Pick a time"; when.classList.add("empty"); }
+    $("#confirmBtn").disabled = $("#barBtn").disabled = !selTime;
+    $$(".step").forEach((s) => {
+      const k = s.dataset.step;
+      const done = k === "when" ? !!selTime : k === "you" ? !!$("#f-name").value && !!$("#f-email").value : true;
+      s.classList.toggle("done", done);
+    });
+  }
+
+  const pickDate = (d) => { selDate = d; renderTimes(); update(); };
+  const drawLessonDates = () => renderDates($("#dates"), "date", pickDate, selDate);
+  $("#prevWeek").addEventListener("click", () => { offset = Math.max(0, offset - 7); drawLessonDates(); });
+  $("#nextWeek").addEventListener("click", () => { offset = Math.min(42, offset + 7); drawLessonDates(); });
+  $$('input[name="what"], input[name="teacher"]').forEach((i) => i.addEventListener("change", () => { renderTimes(); update(); }));
+  $$('input[name="style"], #f-name, #f-email').forEach((i) => i.addEventListener("input", update));
+  $$('input[name="style"]').forEach((i) => i.addEventListener("change", update));
+
+  const confirm = () => {
+    $("#lessonBooker").classList.add("hidden");
+    $("#bookBar").classList.add("hidden");
+    $("#lessonDone").classList.remove("hidden");
+    const w = $('input[name="what"]:checked').dataset.label;
+    const t = $('input[name="teacher"]:checked').dataset.label;
+    $("#doneLine").textContent = `${w}, ${$('input[name="style"]:checked').value}, with ${t === "Any teacher" ? "one of our teachers" : t}. ${fmtLong(selDate)} at ${selTime}. A confirmation is on its way to your inbox.`;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  $("#confirmBtn").addEventListener("click", confirm);
+  $("#barBtn").addEventListener("click", confirm);
+
+  // ---------- group classes ----------
+  let classDate = today, level = "all";
+  function renderClasses() {
+    const list = classes.filter((c) => c[0] === classDate.getDay() && (level === "all" || c[4] === level));
+    $("#classList").innerHTML = list.length ? list.map(([, start, mins, name, lvl, who, cap]) => {
+      const taken = Math.round(hash(key(classDate) + name) * cap * 1.15);
+      const left = Math.max(0, cap - taken);
+      const [cls, txt] = left === 0 ? ["full", "Full"] : left <= 3 ? ["low", `${left} left`] : ["ok", `${left} spaces`];
+      const [h, m] = start.split(":").map(Number);
+      const end = new Date(0, 0, 0, h, m + mins);
+      return `<div class="class-row">
+        <div class="when"><b>${start}</b><span>${mins} min</span></div>
+        <div class="what"><b>${name}</b><span>${lvl} · ${who} · until ${String(end.getHours()).padStart(2, "0")}:${String(end.getMinutes()).padStart(2, "0")}</span></div>
+        <span class="avail ${cls}">${txt}</span>
+        ${left === 0 ? '<button class="btn btn-ghost btn-sm">Join waitlist</button>' : '<button class="btn btn-primary btn-sm" data-book>Book</button>'}
+      </div>`;
+    }).join("") : `<div class="class-row" style="grid-template-columns:1fr"><span style="color:var(--muted)">No classes this day. Private lessons are still available.</span></div>`;
+    $$("[data-book]").forEach((b) => b.addEventListener("click", () => { b.textContent = "Booked"; b.disabled = true; b.classList.replace("btn-primary", "btn-ghost"); }));
+  }
+  const drawClassDates = () => renderDates($("#classDates"), "cdate", (d) => { classDate = d; renderClasses(); }, classDate);
+  $$("#levelSeg button").forEach((b) => b.addEventListener("click", () => {
+    $$("#levelSeg button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    level = b.dataset.level; renderClasses();
+  }));
+  $("#modeTabs").addEventListener("tabchange", (e) => {
+    $("#bookBar").classList.toggle("hidden", e.detail === "class");
+    if (e.detail === "class") { drawClassDates(); renderClasses(); } else drawLessonDates();
+  });
+
+  // ---------- init from URL ----------
+  const type = params.get("type");
+  if (["taster", "single", "five", "ten"].includes(type)) $(`input[name="what"][value="${type}"]`).checked = true;
+  if (params.get("style") === "wedding") $('input[name="style"][value="Wedding dance"]').checked = true;
+  else if (params.get("style")) { const s = $(`input[name="style"][value="${CSS.escape(params.get("style"))}"]`); if (s) s.checked = true; }
+  drawLessonDates(); renderTimes(); update();
+  if (type === "class") $('#modeTabs [data-value="class"]').click();
+})();
+</script>
+</body>
+</html>
