@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>I2D design directions</title>
+<style>
+@font-face { font-family: "DM Sans"; src: url(../assets/fonts/dm-sans-latin-standard-normal.woff2) format("woff2"); font-weight: 100 1000; }
+@font-face { font-family: "Bodoni Moda"; src: url(../assets/fonts/bodoni-moda-latin-standard-normal.woff2) format("woff2"); font-weight: 400 900; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "DM Sans", system-ui, sans-serif; background: #f7f4f0; color: #1b1816; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 48px 24px 80px; }
+h1 { font-family: "Bodoni Moda", serif; font-weight: 500; font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 0 0 8px; letter-spacing: -.01em; }
+.lede { color: #5c5550; margin: 0 0 40px; font-size: 1.05rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 540px), 1fr)); gap: 20px; }
+a.card { display: grid; grid-template-columns: 1fr 120px; gap: 14px; background: #fff; border-radius: 18px; padding: 14px; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(27,24,22,.06), 0 8px 24px rgba(27,24,22,.06); transition: transform .2s, box-shadow .2s; }
+a.card:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(27,24,22,.08), 0 16px 36px rgba(27,24,22,.1); }
+.card img { width: 100%; display: block; border-radius: 10px; aspect-ratio: 16/10; object-fit: cover; object-position: top; }
+.card img.m { aspect-ratio: 1/2; }
+.card .meta { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 4px 4px 2px; }
+.card h2 { margin: 0; font-size: 1.15rem; font-weight: 600; }
+.card p { margin: 4px 0 0; color: #5c5550; font-size: .95rem; line-height: 1.45; }
+.tag { flex: none; font-size: .78rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: #fbe9e2; color: #c4380f; }
+a.card.solo { grid-template-columns: 1fr; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Design directions</h1>
+  <p class="lede">Same studio, same content, five ways to dress it. Open each on your phone too.</p>
+  <div class="grid">
+    <a class="card solo" href="../index.html"><img src="thumb-current.webp" alt="">
+      <div class="meta"><div><h2>Current mockup</h2><p>Warm paper, Bodoni and flame. Full booking, studio hire and account pages.</p></div><span class="tag">Full site</span></div></a>
+    <a class="card" href="editorial/"><img src="thumb-editorial.webp" alt=""><img class="m" src="thumb-editorial-m.webp" alt="">
+      <div class="meta"><div><h2>Editorial</h2><p>A dance magazine. Cream paper, huge serif, captioned plates, booking as a printed programme, a floor plan for hire.</p></div><span class="tag">A</span></div></a>
+    <a class="card" href="after-dark/"><img src="thumb-after-dark.webp" alt=""><img class="m" src="thumb-after-dark-m.webp" alt="">
+      <div class="meta"><div><h2>After dark</h2><p>The speakeasy at night. Oxblood and black, flame glow, arched Deco frames, cinematic photos.</p></div><span class="tag">B</span></div></a>
+    <a class="card" href="studio-app/"><img src="thumb-studio-app.webp" alt=""><img class="m" src="thumb-studio-app-m.webp" alt="">
+      <div class="meta"><div><h2>Studio app</h2><p>Booking first. Bright, friendly, sans only. Today's timetable in the hero, app bar on mobile.</p></div><span class="tag">C</span></div></a>
+    <a class="card" href="poster/"><img src="thumb-poster.webp" alt=""><img class="m" src="thumb-poster-m.webp" alt="">
+      <div class="meta"><div><h2>Poster</h2><p>Festival energy. Solid flame blocks, giant condensed type, duotone photos, a style marquee.</p></div><span class="tag">D</span></div></a>
+  </div>
+</div>
+</body>
+</html>
