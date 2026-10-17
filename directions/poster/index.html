@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Inspiration 2 Dance | Direction: Poster</title>
+<meta name="description" content="Ballroom and Latin dance studio in a listed 1920s ballroom, Piccadilly, London.">
+<link rel="preload" href="../../assets/fonts/poster-archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css"></head><body>
+<header>
+ <a class="logo" href="#top" aria-label="Inspiration 2 Dance home"><img src="../../assets/img/i2d-logo.png" alt="i2D"></a>
+ <button class="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+ <nav class="main" id="nav" aria-label="Main"><a href="#ways">Ways to dance</a><a href="#book">Book</a><a href="#hire">Studio hire</a><a href="#team">Team</a><a href="#visit">Visit</a><a class="cta" href="#book">Book a £40 taster</a></nav>
+</header>
+<main id="top">
+<section class="hero">
+ <div class="grid">
+  <h1><span class="kick k1">There are shortcuts to happiness.</span><span class="disp l1">Dancing</span><span class="disp ol l2">is one.</span></h1>
+  <div class="copy"><p class="lead">Ballroom, Latin and social dance in a listed 1920s ballroom, three minutes from Piccadilly Circus.</p>
+   <div class="row"><a class="btn" href="#book">Book a £40 taster</a><a class="btn ghost" href="#hire">Hire the ballroom</a></div></div>
+  <div class="ph"><img src="../../assets/img/social-night.webp" alt="Social dance night in the ballroom"><div class="stamp disp"><div><b>£40</b><small>30 min taster</small></div></div></div>
+ </div>
+</section>
+<div class="marq" aria-hidden="true"><div class="tr"><span class="disp">Ballroom</span><span class="disp">Latin</span><span class="disp">American Smooth</span><span class="disp">Salsa</span><span class="disp">Argentine Tango</span><span class="disp">Waltz</span><span class="disp">Quickstep</span><span class="disp">Cha-Cha</span><span class="disp">Rumba</span><span class="disp">Jive</span><span class="disp">Samba</span><span class="disp">Paso Doble</span><span class="disp">Ballroom</span><span class="disp">Latin</span><span class="disp">American Smooth</span><span class="disp">Salsa</span><span class="disp">Argentine Tango</span><span class="disp">Waltz</span><span class="disp">Quickstep</span><span class="disp">Cha-Cha</span><span class="disp">Rumba</span><span class="disp">Jive</span><span class="disp">Samba</span><span class="disp">Paso Doble</span></div></div>
+<div class="nums">
+ <div><b>7<em> days</em></b><p>Open every week</p></div>
+ <div><b>£40</b><p>Taster, 30 minutes</p></div>
+ <div><b>9×15<em> m</em></b><p>Main room</p></div>
+ <div><b>2015</b><p>Dancing here since</p></div>
+</div>
+
+<section id="ways">
+ <div class="sh"><h2 class="disp">Ways to dance</h2><p>A few basics before a party, a medal exam or a competition floor. Our teachers are current and former world-class competitors.</p></div>
+ <div class="ways">
+  <article class="card c-or s5"><div><h3>Taster lesson</h3><p>Your first half hour, one to one, in any style.</p></div><div class="pk"><div class="price">£40<small>30 min</small></div><a class="btn dk" href="#book">Book a taster</a></div></article>
+  <article class="card c-k s4"><div><h3>Private lesson</h3><p>One to one or as a couple, with a teacher you choose.</p></div><div class="pk"><div class="price" style="color:var(--o)">£105<small style="color:var(--w)">60 min</small></div></div></article>
+  <article class="card ph s3"><img src="../../assets/img/red-dresses.webp" alt="Dancers in red dresses" loading="lazy"><span class="lab">Latin</span></article>
+  <article class="card ph s3"><img src="../../assets/img/competition-latin.webp" alt="Latin competition" loading="lazy"><span class="lab">Compete</span></article>
+  <article class="card c-w s4"><div><h3>5 hour package</h3><p>Includes weekly group classes and solo practice in the ballroom.</p></div><div class="price">£495<small>5 hours</small></div></article>
+  <article class="card c-w s5"><div><h3>10 hour package</h3><p>The same inclusions, with the best rate per hour.</p></div><div class="price">£950<small>10 hours</small></div></article>
+  <article class="card c-g s4 half" style="background:var(--g)"><div><h3>Group classes</h3><p>Weekly Ballroom, Latin and social classes for adults and kids.</p></div><a class="btn dk more" href="#book">See this week</a></article>
+  <article class="card c-k s4 half"><div><h3>First dance</h3><p>Simple steps or full choreography to your song. Father and daughter dances and hen parties too.</p></div><a class="btn more" href="#visit">Plan your first dance</a></article>
+  <article class="card c-or s4"><div><h3>Pro-Am &amp; exams</h3><p>Shows, competitions and IDTA medal exams with a professional partner.</p></div><a class="btn more" href="#visit">Talk to us</a></article>
+ </div>
+</section>
+
+<section class="book on-k" id="book">
+ <div class="sh"><h2 class="disp">Book a lesson</h2><p>Pick a lesson, a teacher and a time. Sample availability shown.</p></div>
+ <div class="bk">
+  <div class="panel">
+   <div class="step"><h4><i>01</i> Lesson</h4><div class="opts" id="lessons"></div></div>
+   <div class="step"><h4><i>02</i> Teacher</h4><div class="chips" id="teachers"></div></div>
+   <div class="step"><h4><i>03</i> Day</h4><div class="days" id="days"></div></div>
+   <div class="step"><h4><i>04</i> Time</h4><div class="slots" id="slots"></div></div>
+  </div>
+  <aside class="sum" aria-live="polite">
+   <div class="tot" id="tot">£40</div>
+   <dl><dt>Lesson</dt><dd id="s-l"></dd><dt>Teacher</dt><dd id="s-t"></dd><dt>When</dt><dd id="s-w"></dd></dl>
+   <div><a class="btn" href="#visit" id="s-go">Choose a time</a><p class="note" style="margin-top:12px">Mock-up only. Nothing is booked.</p></div>
+  </aside>
+ </div>
+</section>
+
+<section class="hire on-k" id="hire">
+ <div class="sh"><h2 class="disp">Hire the floor</h2><p>Shared floor hire, or the whole room on request. Air con, wifi and a sound system you can share.</p></div>
+ <div class="rooms">
+  <article class="room" style="grid-column:span 6"><img src="../../assets/img/ballroom-ceiling.webp" alt="Painted ballroom ceiling and chandeliers" loading="lazy"><h3>Main room</h3><div class="sz">9×15<small> m</small></div><p>Chandeliers and a painted ceiling.</p></article>
+  <article class="room" style="grid-column:span 3"><img src="../../assets/img/ballroom-floor.webp" alt="Small room floor" loading="lazy"><h3>Small room</h3><div class="sz">10×10<small> m</small></div></article>
+  <article class="room" style="grid-column:span 3"><img src="../../assets/img/gala-waltz.webp" alt="View over the ballroom" loading="lazy"><h3>Balcony</h3><div class="sz">3<small> areas</small></div><p>Seating overlooking the floor.</p></article>
+ </div>
+ <div class="hp">
+  <div class="rate"><div><div class="kick">Shared floor hire</div><div class="price">£22</div><div class="kick">per 60 min</div></div>
+   <ul><li>45 or 60 min slots</li><li>Book at least 12 h ahead</li><li>Cancel up to 24 h before</li><li>Exclusive hire on request</li></ul></div>
+  <div class="panel">
+   <div class="step"><h4><i>01</i> Room</h4><div class="chips" id="hroom"></div></div>
+   <div class="step"><h4><i>02</i> Day</h4><div class="days" id="hdays"></div></div>
+   <div class="step"><h4><i>03</i> Slots</h4><div class="slots" id="hslots"></div><p class="legend">Pick one or more hourly slots. Struck-through slots are taken.</p></div>
+   <div class="hire-out"><b id="hsum">Select a slot</b><a class="btn" href="#visit">Request hire</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="team">
+ <div class="sh"><h2 class="disp">The team</h2><p>Eight teachers, led by Viktoriya Wilton. IDTA and ISTD qualified.</p></div>
+ <div class="team-g"><article class="tm"><div class="im"><img src="../../assets/img/team-viktoriya-wilton.webp" alt="Viktoriya Wilton" loading="lazy"></div><h3>Viktoriya Wilton</h3><span>Lead teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-byron-rowe.webp" alt="Byron Rowe" loading="lazy"></div><h3>Byron Rowe</h3><span>Teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-roman-sukhomlyn.webp" alt="Roman Sukhomlyn" loading="lazy"></div><h3>Roman Sukhomlyn</h3><span>Teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-olga-gandembul.webp" alt="Olga Gandembul" loading="lazy"></div><h3>Olga Gandembul</h3><span>Teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-maksym-svyatobatko.webp" alt="Maksym Svyatobatko" loading="lazy"></div><h3>Maksym Svyatobatko</h3><span>Teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-oleksandr-kutniakov.webp" alt="Oleksandr Kutniakov" loading="lazy"></div><h3>Oleksandr Kutniakov</h3><span>Teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-anastasia-sheptitskaya.webp" alt="Anastasia Sheptitskaya" loading="lazy"></div><h3>Anastasia Sheptitskaya</h3><span>Teacher</span></article><article class="tm"><div class="im"><img src="../../assets/img/team-oleksandr-yasynskyi.webp" alt="Oleksandr Yasynskyi" loading="lazy"></div><h3>Oleksandr Yasynskyi</h3><span>Teacher</span></article></div>
+</section>
+
+<section class="visit on-k" id="visit">
+ <h2 class="disp">21 Piccadilly</h2>
+ <div class="vg">
+  <div class="vc v4"><h3>Find us</h3><p>The Dilly, Floor C<br>21 Piccadilly<br>London W1J 0BH</p></div>
+  <div class="vc v4"><h3>Open</h3><table><tr><td>Mon to Fri</td><td>10:00 to 21:45</td></tr><tr><td>Sat and Sun</td><td>10:00 to 19:45</td></tr></table></div>
+  <div class="vc v4"><h3>Talk to us</h3><p><a href="tel:07711652875">07711 652 875</a><br><a href="mailto:info@inspiration2dance.com">info@inspiration2dance.com</a></p></div>
+ </div>
+</section>
+</main>
+<footer><img src="../../assets/img/i2d-logo.png" alt="Inspiration 2 Dance"><span>Ballroom, Latin, American Smooth, Salsa and Argentine Tango. Since 2015.</span><nav><a href="#ways">Ways to dance</a><a href="#book">Book</a><a href="#hire">Studio hire</a><a href="#team">Team</a></nav></footer>
+<script src="script.js"></script></body></html>

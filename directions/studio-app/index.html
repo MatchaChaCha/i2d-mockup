@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f6f3ef">
+<title>Inspiration 2 Dance · Studio app direction</title>
+<meta name="description" content="Ballroom and Latin dance studio in a listed 1920s ballroom, 21 Piccadilly, London.">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/instrument-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Inspiration 2 Dance home"><img src="../../assets/img/i2d-logo.png" alt="i2D"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#offers">Ways to dance</a>
+      <a href="#book">Book</a>
+      <a href="#hire">Studio hire</a>
+      <a href="#team">Teachers</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm hide-sm" href="tel:07711652875">07711 652 875</a>
+      <a class="btn btn-primary btn-sm" href="#book">Book</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" hidden>
+  <nav aria-label="Mobile">
+    <a href="#offers">Ways to dance</a>
+    <a href="#book">Book a lesson</a>
+    <a href="#hire">Studio hire</a>
+    <a href="#team">Teachers</a>
+    <a href="#visit">Visit and contact</a>
+  </nav>
+  <a class="btn btn-primary btn-block" href="tel:07711652875">Call 07711 652 875</a>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero wrap">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="dot"></span> Open 7 days, 21 Piccadilly</p>
+    <h1>Dance in a 1920s ballroom. Book in a minute.</h1>
+    <p class="lead">Ballroom, Latin and social dance with IDTA and ISTD qualified teachers, three minutes from Piccadilly Circus.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary btn-lg" href="#book">Book a £40 taster</a>
+      <a class="btn btn-ghost btn-lg" href="#hire">Hire the floor</a>
+    </div>
+    <ul class="facts">
+      <li><strong>2015</strong><span>Dancing here since</span></li>
+      <li><strong>5</strong><span>Styles taught</span></li>
+      <li><strong>8</strong><span>Teachers</span></li>
+    </ul>
+    <figure class="hero-photo">
+      <img src="../../assets/img/social-night.webp" alt="Social dance night in the ballroom" width="900" height="600">
+    </figure>
+  </div>
+
+  <aside class="booker card" aria-label="Quick booking">
+    <div class="booker-head">
+      <div>
+        <p class="eyebrow-s">Today at I2D</p>
+        <h2 id="todayDate">Today</h2>
+      </div>
+      <span class="pill pill-live"><i></i> Sample times</span>
+    </div>
+    <ul class="timetable" id="timetable"></ul>
+
+    <div class="booker-split">
+      <p class="eyebrow-s">Next free private slots</p>
+      <div class="chips" id="nextSlots" role="radiogroup" aria-label="Next free slots"></div>
+    </div>
+    <div class="booker-foot">
+      <div><span class="muted">Private lesson, 60 min</span><strong id="nextPrice">£105</strong></div>
+      <a class="btn btn-primary" href="#book" id="nextGo">Choose a slot</a>
+    </div>
+  </aside>
+</section>
+
+<!-- OFFERS -->
+<section class="section wrap" id="offers">
+  <div class="sec-head">
+    <p class="eyebrow-s">Ways to dance</p>
+    <h2>First steps to first place.</h2>
+    <p class="muted">Our teachers are current and former world-class competitors.</p>
+  </div>
+
+  <div class="price-grid">
+    <article class="card price price-feature">
+      <span class="pill pill-flame">Start here</span>
+      <h3>Taster lesson</h3>
+      <p class="amt">£40<small>30 min</small></p>
+      <p>Your first half hour, one to one, in any style.</p>
+      <a class="btn btn-primary btn-block" href="#book" data-lesson="taster">Book a taster</a>
+    </article>
+    <article class="card price">
+      <h3>Private lesson</h3>
+      <p class="amt">£105<small>60 min</small></p>
+      <p>One to one or as a couple, with the teacher of your choice.</p>
+      <a class="btn btn-ghost btn-block" href="#book" data-lesson="private">Choose a teacher</a>
+    </article>
+    <article class="card price">
+      <h3>5 hour package</h3>
+      <p class="amt">£495<small>£99 an hour</small></p>
+      <p>Includes all weekly group classes and solo practice in the ballroom.</p>
+      <a class="btn btn-ghost btn-block" href="#book" data-lesson="five">Get the package</a>
+    </article>
+    <article class="card price">
+      <h3>10 hour package</h3>
+      <p class="amt">£950<small>£95 an hour</small></p>
+      <p>Includes all weekly group classes and solo practice in the ballroom.</p>
+      <a class="btn btn-ghost btn-block" href="#book" data-lesson="ten">Get the package</a>
+    </article>
+  </div>
+
+  <div class="more-grid">
+    <article class="card more">
+      <img src="../../assets/img/red-dresses.webp" alt="Dancers in red dresses" loading="lazy">
+      <div><h3>Group classes</h3><p>Weekly Ballroom, Latin and social classes for adults and kids.</p><a class="link" href="#top">See this week</a></div>
+    </article>
+    <article class="card more">
+      <img src="../../assets/img/gala-waltz.webp" alt="A waltz at a gala evening" loading="lazy">
+      <div><h3>Wedding first dance</h3><p>Simple steps or full choreography to your song. Father and daughter dances and hen parties too.</p><a class="link" href="#visit">Plan your dance</a></div>
+    </article>
+    <article class="card more">
+      <img src="../../assets/img/competition-latin.webp" alt="Latin couple competing" loading="lazy">
+      <div><h3>Pro-Am and IDTA exams</h3><p>Shows, competitions and IDTA medal exams with a professional partner.</p><a class="link" href="#visit">Talk to us</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section wrap" id="book">
+  <div class="sec-head">
+    <p class="eyebrow-s">Book a lesson</p>
+    <h2>Pick it. Time it. Done.</h2>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-steps">
+      <div class="step card">
+        <h3><span class="n">1</span> Lesson</h3>
+        <div class="opts" id="optLesson" role="radiogroup" aria-label="Lesson type">
+          <button class="opt" role="radio" data-id="taster" data-name="Taster lesson" data-min="30" data-price="40" aria-checked="false"><b>Taster</b><span>30 min</span><em>£40</em></button>
+          <button class="opt" role="radio" data-id="private" data-name="Private lesson" data-min="60" data-price="105" aria-checked="true"><b>Private lesson</b><span>60 min</span><em>£105</em></button>
+          <button class="opt" role="radio" data-id="five" data-name="5 hour package" data-min="60" data-price="495" aria-checked="false"><b>5 hour package</b><span>First hour</span><em>£495</em></button>
+          <button class="opt" role="radio" data-id="ten" data-name="10 hour package" data-min="60" data-price="950" aria-checked="false"><b>10 hour package</b><span>First hour</span><em>£950</em></button>
+        </div>
+      </div>
+
+      <div class="step card">
+        <h3><span class="n">2</span> Teacher</h3>
+        <div class="teachers-pick" id="optTeacher" role="radiogroup" aria-label="Teacher"></div>
+      </div>
+
+      <div class="step card">
+        <h3><span class="n">3</span> Date</h3>
+        <div class="dates" id="dates" role="radiogroup" aria-label="Date"></div>
+        <h3 class="sub"><span class="n">4</span> Time</h3>
+        <div class="slots" id="slots" role="radiogroup" aria-label="Time"></div>
+        <p class="note">Sample availability for this mockup.</p>
+      </div>
+    </div>
+
+    <aside class="summary card" aria-live="polite">
+      <p class="eyebrow-s">Your booking</p>
+      <dl>
+        <div><dt>Lesson</dt><dd id="sLesson">-</dd></div>
+        <div><dt>Teacher</dt><dd id="sTeacher">-</dd></div>
+        <div><dt>Date</dt><dd id="sDate">-</dd></div>
+        <div><dt>Time</dt><dd id="sTime">Pick a time</dd></div>
+      </dl>
+      <div class="total"><span>Total</span><strong id="sPrice">£105</strong></div>
+      <button class="btn btn-primary btn-block btn-lg" id="sGo" disabled>Pick a time</button>
+      <p class="note">Mockup only, nothing is sent.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- HIRE -->
+<section class="section wrap" id="hire">
+  <div class="sec-head">
+    <p class="eyebrow-s">Studio hire</p>
+    <h2>Shared floor, £22 an hour.</h2>
+    <p class="muted">Practise in the ballroom. 45 or 60 minute slots, booked at least 12 hours ahead, cancel up to 24 hours before.</p>
+  </div>
+
+  <div class="rooms">
+    <article class="room">
+      <img src="../../assets/img/ballroom-ceiling.webp" alt="Painted ceiling and chandeliers in the main room" loading="lazy">
+      <div class="room-t"><h3>Main room</h3><span class="pill">9 × 15 m</span></div>
+      <p>Chandeliers and a painted ceiling.</p>
+    </article>
+    <article class="room">
+      <img src="../../assets/img/social-night.webp" alt="Dancers on the floor" loading="lazy">
+      <div class="room-t"><h3>Small room</h3><span class="pill">10 × 10 m</span></div>
+      <p>Square floor for rehearsals.</p>
+    </article>
+    <article class="room">
+      <img src="../../assets/img/ballroom-floor.webp" alt="Balcony overlooking the floor" loading="lazy">
+      <div class="room-t"><h3>Balcony</h3><span class="pill">3 seating areas</span></div>
+      <p>Overlooks the floor.</p>
+    </article>
+  </div>
+
+  <div class="hire card">
+    <div class="tabs" role="tablist" aria-label="Hire type">
+      <button role="tab" aria-selected="true" aria-controls="paneShared" id="tabShared">Shared floor</button>
+      <button role="tab" aria-selected="false" aria-controls="paneExcl" id="tabExcl">Exclusive hire</button>
+    </div>
+
+    <div class="pane" id="paneShared" role="tabpanel" aria-labelledby="tabShared">
+      <div class="hire-bar">
+        <div class="seg" id="lenSeg" role="radiogroup" aria-label="Slot length">
+          <button role="radio" aria-checked="false" data-len="45">45 min</button>
+          <button role="radio" aria-checked="true" data-len="60">60 min</button>
+        </div>
+        <div class="week-nav">
+          <button class="icon-btn" id="wkPrev" aria-label="Previous week">&#8249;</button>
+          <strong id="wkLabel">This week</strong>
+          <button class="icon-btn" id="wkNext" aria-label="Next week">&#8250;</button>
+        </div>
+      </div>
+      <div class="grid-scroll"><div class="week" id="week" role="grid" aria-label="Shared floor availability"></div></div>
+      <ul class="legend">
+        <li><i class="k k-free"></i> Free</li>
+        <li><i class="k k-few"></i> Busy</li>
+        <li><i class="k k-full"></i> Booked</li>
+        <li><i class="k k-soon"></i> Under 12 h away</li>
+        <li><i class="k k-sel"></i> Your pick</li>
+      </ul>
+      <div class="hire-foot">
+        <div><strong id="hSel">Pick a free slot</strong><span class="muted" id="hSub">£22 per 60 min</span></div>
+        <button class="btn btn-primary" id="hGo" disabled>Request slot</button>
+      </div>
+    </div>
+
+    <div class="pane" id="paneExcl" role="tabpanel" aria-labelledby="tabExcl" hidden>
+      <div class="excl">
+        <div>
+          <h3>The whole ballroom, just yours.</h3>
+          <p>Workshops, shoots, rehearsals and private events. Tell us the date and numbers and we will send a quote.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:info@inspiration2dance.com?subject=Exclusive%20hire">Request a quote</a>
+          <a class="btn btn-ghost" href="tel:07711652875">Call us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="wrap sec-head row">
+    <div>
+      <p class="eyebrow-s">Teachers</p>
+      <h2>Eight teachers. Every style.</h2>
+    </div>
+    <div class="scroll-btns">
+      <button class="icon-btn" id="tPrev" aria-label="Scroll teachers left">&#8249;</button>
+      <button class="icon-btn" id="tNext" aria-label="Scroll teachers right">&#8250;</button>
+    </div>
+  </div>
+  <ul class="team" id="teamRail">
+    <li class="tcard"><img src="../../assets/img/team-viktoriya-wilton.webp" alt="Viktoriya Wilton" loading="lazy"><div><b>Viktoriya Wilton</b><span>Lead teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-byron-rowe.webp" alt="Byron Rowe" loading="lazy"><div><b>Byron Rowe</b><span>Teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-roman-sukhomlyn.webp" alt="Roman Sukhomlyn" loading="lazy"><div><b>Roman Sukhomlyn</b><span>Teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-olga-gandembul.webp" alt="Olga Gandembul" loading="lazy"><div><b>Olga Gandembul</b><span>Teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-maksym-svyatobatko.webp" alt="Maksym Svyatobatko" loading="lazy"><div><b>Maksym Svyatobatko</b><span>Teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-oleksandr-kutniakov.webp" alt="Oleksandr Kutniakov" loading="lazy"><div><b>Oleksandr Kutniakov</b><span>Teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-anastasia-sheptitskaya.webp" alt="Anastasia Sheptitskaya" loading="lazy"><div><b>Anastasia Sheptitskaya</b><span>Teacher</span></div></li>
+    <li class="tcard"><img src="../../assets/img/team-oleksandr-yasynskyi.webp" alt="Oleksandr Yasynskyi" loading="lazy"><div><b>Oleksandr Yasynskyi</b><span>Teacher</span></div></li>
+  </ul>
+  <div class="wrap styles">
+    <span class="muted">Styles</span>
+    <span class="tag">Ballroom</span><span class="tag">Latin</span><span class="tag">American Smooth</span><span class="tag">Salsa</span><span class="tag">Argentine Tango</span>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section wrap" id="visit">
+  <div class="visit">
+    <div class="card visit-info">
+      <p class="eyebrow-s">Visit</p>
+      <h2>The Dilly, Floor C.</h2>
+      <address>21 Piccadilly<br>London W1J 0BH</address>
+      <div class="hours">
+        <div><span>Monday to Friday</span><b>10:00 to 21:45</b></div>
+        <div><span>Saturday and Sunday</span><b>10:00 to 19:45</b></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:07711652875">07711 652 875</a>
+        <a class="btn btn-ghost" href="mailto:info@inspiration2dance.com">info@inspiration2dance.com</a>
+      </div>
+    </div>
+    <figure class="visit-photo">
+      <img src="../../assets/img/competition-ballroom.webp" alt="Ballroom couple competing" loading="lazy">
+      <figcaption>Built in the 1920s for secret Charleston parties. The painted ceilings and chandeliers are listed and still here.</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <img src="../../assets/img/i2d-logo.png" alt="Inspiration 2 Dance" class="foot-logo">
+    <p>Inspiration 2 Dance, The Dilly, Floor C, 21 Piccadilly, London W1J 0BH</p>
+    <p><a href="tel:07711652875">07711 652 875</a> · <a href="mailto:info@inspiration2dance.com">info@inspiration2dance.com</a></p>
+    <p class="muted">Dancing in Piccadilly since 2015</p>
+  </div>
+</footer>
+
+<!-- Mobile app bar -->
+<nav class="appbar" aria-label="Quick actions">
+  <a href="#top"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Today</a>
+  <a href="#book" class="appbar-main">Book a lesson</a>
+  <a href="#hire"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Hire</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
