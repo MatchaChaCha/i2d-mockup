@@ -8,7 +8,7 @@
 <link rel="preload" href="assets/fonts/bodoni-moda-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
-<link rel="icon" href="assets/img/i2d-logo.png">
+<link rel="icon" href="assets/img/i2d-mark.svg" type="image/svg+xml">
 </head>
 <body data-page="home">
 <div data-header></div>
@@ -32,38 +32,29 @@
   </section>
 
   <div class="rail">
-    <div class="quick" id="quick">
-      <div class="quick-tabs" role="tablist" data-tabs>
-        <button class="ctab" role="tab" aria-selected="true" data-value="lesson">Private lesson</button>
-        <button class="ctab" role="tab" aria-selected="false" data-value="class">Group class</button>
-        <button class="ctab" role="tab" aria-selected="false" data-value="hire">Studio hire</button>
-      </div>
-      <form class="quick-body" action="book.html">
-        <div class="field">
-          <label for="q-what" data-q-label>Lesson</label>
-          <select class="control" id="q-what" name="type">
-            <option value="taster">Taster, 30 min · £40</option>
-            <option value="single">Private lesson, 60 min · £105</option>
-            <option value="five">5 hour package · £495</option>
-            <option value="ten">10 hour package · £950</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="q-style">Style</label>
-          <select class="control" id="q-style" name="style">
-            <option>Ballroom</option><option>Latin</option><option>American Smooth</option>
-            <option>Salsa</option><option>Argentine Tango</option><option>Wedding dance</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="q-when">When</label>
-          <select class="control" id="q-when" name="when">
-            <option>This week</option><option>Next week</option><option>Pick a date</option>
-          </select>
-        </div>
-        <button class="btn btn-primary" type="submit">See times</button>
-      </form>
-    </div>
+    <nav class="quick" id="quick" aria-label="Book">
+      <a class="qt" href="book.html?type=taster">
+        <span class="qt-k">Private lessons</span>
+        <span class="qt-t">Taster lesson</span>
+        <span class="qt-m"><b>£40</b> for 30 min, then £105 an hour</span>
+        <span class="qt-next"><i></i>Next free <b><span data-day></span> 10:00</b></span>
+        <span class="qt-go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="qt" href="book.html?type=class">
+        <span class="qt-k">Group classes</span>
+        <span class="qt-t">Weekly classes</span>
+        <span class="qt-m">Beginner to improver, adults and kids</span>
+        <span class="qt-next"><i></i>Next class <b><span data-day></span> 12:00</b></span>
+        <span class="qt-go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="qt" href="studio-hire.html">
+        <span class="qt-k">Studio hire</span>
+        <span class="qt-t">Floor time</span>
+        <span class="qt-m"><b>£22</b> an hour on the shared floor</span>
+        <span class="qt-next"><i></i>Next free <b><span data-day></span> 11:00</b></span>
+        <span class="qt-go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </nav>
   </div>
 
   <section class="section">
@@ -86,7 +77,7 @@
           </div>
         </a>
         <a class="offer tall" href="book.html?type=taster">
-          <div class="ph"><img src="assets/img/team-anastasia-sheptitskaya.webp" alt="Anastasia, one of our teachers, in the studio" width="720" height="900" loading="lazy" style="object-position:50% 20%"></div>
+          <div class="ph"><img src="assets/img/team-anastasia-sheptitskaya.webp" alt="Anastasia, one of our teachers, in the studio" width="720" height="900" loading="lazy" style="object-position:50% 8%"></div>
           <div class="body">
             <div class="row"><h3>Taster lesson</h3><span class="price">£40 <small>/ 30 min</small></span></div>
             <p>Your first half hour, one to one, in any style.</p>
@@ -222,23 +213,8 @@
 <div data-footer></div>
 <script src="assets/site.js"></script>
 <script>
-  // Quick booker: swap the first field per tab
-  (function () {
-    const sel = document.getElementById("q-what");
-    const lab = document.querySelector("[data-q-label]");
-    const form = document.querySelector(".quick-body");
-    const sets = {
-      lesson: ["Lesson", "book.html", [["taster","Taster, 30 min · £40"],["single","Private lesson, 60 min · £105"],["five","5 hour package · £495"],["ten","10 hour package · £950"]]],
-      class: ["Level", "book.html", [["class","Beginner"],["class","Improver"],["class","Intermediate"],["class","Kids"]]],
-      hire: ["Room", "studio-hire.html", [["main","Main room, 9 × 15 m"],["small","Small room, 10 × 10 m"],["exclusive","Whole venue, exclusive"]]],
-    };
-    document.querySelector(".quick-tabs").addEventListener("tabchange", (e) => {
-      const [label, action, opts] = sets[e.detail];
-      lab.textContent = label;
-      form.action = action;
-      sel.innerHTML = opts.map(([v, t]) => `<option value="${v}">${t}</option>`).join("");
-    });
-  })();
+  // Quick booker: sample "next free" days, relative to today
+  document.querySelectorAll("[data-day]").forEach((el) => { el.textContent = "Tomorrow"; });
 </script>
 </body>
 </html>

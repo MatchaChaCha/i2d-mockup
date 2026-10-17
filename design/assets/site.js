@@ -11,7 +11,7 @@
   ];
   const arrow = '<svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const brand = (cls = "") =>
-    `<a class="brand ${cls}" href="index.html"><img src="assets/img/i2d-logo.png" alt="" width="44" height="42"><span class="brand-name"><b>Inspiration 2 Dance</b><span>Piccadilly, London</span></span></a>`;
+    `<a class="brand ${cls}" href="index.html"><img src="assets/img/i2d-mark.svg" alt="" width="62" height="30"><span class="brand-name"><b>Inspiration 2 Dance</b><span>Piccadilly, London</span></span></a>`;
 
   const header = document.querySelector("[data-header]");
   if (header) {
